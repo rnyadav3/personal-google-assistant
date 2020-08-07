@@ -8,7 +8,7 @@ import smtplib
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-# print(voices[1].id)
+print(voices[1].id)
 engine.setProperty('voice', voices[0].id)
 
 
@@ -61,7 +61,7 @@ def sendEmail(to, content):
 if __name__ == "__main__":
     wishMe()
     while True:
-    # if 1:
+    #if 1:
         query = takeCommand().lower()
 
     
@@ -83,11 +83,11 @@ if __name__ == "__main__":
             webbrowser.open("stackoverflow.com")   
 
 
-      # 'play music' in query:
-          #  music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
-           # songs = os.listdir(music_dir)
-           # print(songs)    
-           # os.startfile(os.path.join(music_dir, songs[0]))
+       'play music' in query:
+            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
+            songs = os.listdir(music_dir)
+            print(songs)    
+            os.startfile(os.path.join(music_dir, songs[0]))
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
